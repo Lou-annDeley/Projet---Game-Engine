@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15713dc69d83c474ca21c8e675f854d1, type: 3}
+  m_Name: ingr_herbe_lunaire
+  m_EditorClassIdentifier: Assembly-CSharp::IngredientData
+  id: ING01
+  nom: Herbe lunaire
+  sprite: {fileID: 0}
+  description: Base de beaucoup de potions, douce et apaisante
+  type: 0
+  qualite: 1
+  niveauDeblocage: 1
+  prixAchat: 2
+  stockDepart: 10
+  obtention: Boutique

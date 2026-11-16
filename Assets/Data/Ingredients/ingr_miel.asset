@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15713dc69d83c474ca21c8e675f854d1, type: 3}
+  m_Name: ingr_miel
+  m_EditorClassIdentifier: Assembly-CSharp::IngredientData
+  id: ING04
+  nom: Miel
+  sprite: {fileID: 0}
+  description: "Adoucit les recettes, go\xFBt sucr\xE9"
+  type: 0
+  qualite: 1
+  niveauDeblocage: 1
+  prixAchat: 3
+  stockDepart: 8
+  obtention: Boutique
