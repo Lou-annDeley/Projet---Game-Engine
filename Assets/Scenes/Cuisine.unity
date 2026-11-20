@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 40026089}
   - component: {fileID: 40026088}
   - component: {fileID: 40026090}
+  - component: {fileID: 40026091}
   m_Layer: 0
   m_Name: StockManager
   m_TagString: Untagged
@@ -196,7 +197,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PoisonManager
   reglages: {fileID: 11400000, guid: d8ce5dcf12ebc814e94cdaf44fe0bbec, type: 2}
-  niveauDeDepart: 1
+  niveauDeDepart: 5
+--- !u!114 &40026091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40026087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27fc64c5bc570f649b95136ab20828b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClientsEmpoisonnes
+  remedes:
+  - {fileID: 11400000, guid: 3489a76e1de88a548a2b581e251337fe, type: 2}
+  - {fileID: 11400000, guid: 554e2570b33ed954f8972f0c5846f35f, type: 2}
+  - {fileID: 11400000, guid: 1512a2e23e0aa844dada15deb85d3940, type: 2}
+  - {fileID: 11400000, guid: d48ac856307912446a053c9533e209cc, type: 2}
+  graviteMortelle: 3
+  malades: []
+  totalEmpoisonnes: 0
+  totalMorts: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,6 +449,54 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619394800}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1018071165
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1018071167}
+  - component: {fileID: 1018071166}
+  m_Layer: 0
+  m_Name: TestClient
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1018071166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018071165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3bfdbe478602474794301896344ff91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TestClientEmpoisonne
+  clientId: client_test
+  nomClient: Client de test
+  poison: {fileID: 11400000, guid: fcfb0c6d2ea705a4492ce7d6ecd564ed, type: 2}
+  chaudron: {fileID: 0}
+--- !u!4 &1018071167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018071165}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -718,3 +788,4 @@ SceneRoots:
   - {fileID: 40026089}
   - {fileID: 1035077401}
   - {fileID: 1701839278}
+  - {fileID: 1018071167}

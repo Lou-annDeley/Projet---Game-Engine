@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e72229bf45e5e42b47de23de175e22, type: 3}
+  m_Name: rem_baume_vert
+  m_EditorClassIdentifier: Assembly-CSharp::RemedeData
+  id: REM01
+  nom: Baume vert
+  anomalie: "Peau verd\xE2tre"
+  codeAnomalie: peau_verte
+  causePoison: {fileID: 11400000, guid: fcfb0c6d2ea705a4492ce7d6ecd564ed, type: 2}
+  ingredients:
+  - {fileID: 11400000, guid: 1a77d79315c8a0b42b870a89075c6149, type: 2}
+  - {fileID: 11400000, guid: 211fbf537a885de48899acc263ffa007, type: 2}
+  tempsPreparation: 20
+  prixVente: 12
+  niveauDeblocage: 3
+  siRate: 0
