@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 40026089}
   - component: {fileID: 40026088}
+  - component: {fileID: 40026090}
   m_Layer: 0
   m_Name: StockManager
   m_TagString: Untagged
@@ -182,6 +183,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &40026090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40026087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb60f74cb6ef174982d962176902057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PoisonManager
+  reglages: {fileID: 11400000, guid: d8ce5dcf12ebc814e94cdaf44fe0bbec, type: 2}
+  niveauDeDepart: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,7 +668,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1701839278}
-  - component: {fileID: 1701839277}
+  - component: {fileID: 1701839279}
   m_Layer: 0
   m_Name: Etagere
   m_TagString: Untagged
@@ -661,22 +676,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1701839277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701839276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a435eb4fb9adf54781271d9be600dd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Etagere
-  ingredients: []
-  colonnes: 6
-  espacement: 2
-  tailleBocal: 1
 --- !u!4 &1701839278
 Transform:
   m_ObjectHideFlags: 0
@@ -692,6 +691,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1701839279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701839276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be0f209914b5f44e83f188df1134a7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Etagere
+  ingredients: []
+  colonnes: 6
+  espacement: 2
+  tailleBocal: 1
+  respecterNiveauDeblocage: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
