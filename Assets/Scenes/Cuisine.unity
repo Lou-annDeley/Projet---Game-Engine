@@ -119,6 +119,65 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &85163424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 85163426}
+  - component: {fileID: 85163425}
+  m_Layer: 0
+  m_Name: Grimoir
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &85163425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85163424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bea898f7543d84043a8d4bf175c9e083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Grimoire
+  recettes:
+  - {fileID: 11400000, guid: d645dcfeff5826344995f2a009e8770f, type: 2}
+  - {fileID: 11400000, guid: 0dc96a6b030050c46b910da5279e1c0b, type: 2}
+  - {fileID: 11400000, guid: 9732fd2c4cd679642bbd6b8c189dd99b, type: 2}
+  - {fileID: 11400000, guid: ca2e708a0de01c2469be6afb0d917aff, type: 2}
+  - {fileID: 11400000, guid: fc20fed7cfa181f4d94e0616edff0c89, type: 2}
+  - {fileID: 11400000, guid: fb93c42682a9afb4f8259023015a7733, type: 2}
+  - {fileID: 11400000, guid: 50b8f117d64067b4a85b0d5a00da6dcb, type: 2}
+  - {fileID: 11400000, guid: 332d43061fa2eaf4a9d837984c14f9bb, type: 2}
+  remedes:
+  - {fileID: 11400000, guid: 3489a76e1de88a548a2b581e251337fe, type: 2}
+  - {fileID: 11400000, guid: 554e2570b33ed954f8972f0c5846f35f, type: 2}
+  - {fileID: 11400000, guid: 1512a2e23e0aa844dada15deb85d3940, type: 2}
+  - {fileID: 11400000, guid: d48ac856307912446a053c9533e209cc, type: 2}
+  montrerVerrouillees: 1
+--- !u!4 &85163426
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85163424}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,6 +749,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StockManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5729645613775157376, guid: 9b1d628c2bbbccb438c83f5ddb3b9e1a, type: 3}
+      propertyPath: niveauDeDepart
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8822546372204750619, guid: 9b1d628c2bbbccb438c83f5ddb3b9e1a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -746,3 +809,4 @@ SceneRoots:
   - {fileID: 1035077401}
   - {fileID: 1701839278}
   - {fileID: 1018071167}
+  - {fileID: 85163426}

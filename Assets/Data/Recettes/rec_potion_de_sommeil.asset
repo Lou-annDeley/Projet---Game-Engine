@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7797862ba80e7574083d239cb1b83e36, type: 3}
+  m_Name: rec_potion_de_sommeil
+  m_EditorClassIdentifier: Assembly-CSharp::RecetteData
+  id: REC06
+  nom: Potion de sommeil
+  categorie: 1
+  ingredients:
+  - {fileID: 11400000, guid: 0b689fe153035b241ae063b77fe99a69, type: 2}
+  - {fileID: 11400000, guid: 0870ac3abc2c21945ae644e8d408d2bf, type: 2}
+  - {fileID: 11400000, guid: 826c5348e8ee1da4383882057cc3e272, type: 2}
+  tempsPreparation: 25
+  prixVente: 16
+  niveauDeblocage: 4
+  ingredientPoison: {fileID: 11400000, guid: 167eba0e1c91c714b8ee377648d79d28, type: 2}
