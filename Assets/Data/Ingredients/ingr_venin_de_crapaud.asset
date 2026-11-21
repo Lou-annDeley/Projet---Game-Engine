@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
   id: ING13
   nom: Venin de crapaud
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 915b8a2de358ffc44a2de9811aa2d24d, type: 3}
   description: "Tr\xE8s puissant, effet visible d\xE8s le retour du client"
   type: 1
   qualite: 1

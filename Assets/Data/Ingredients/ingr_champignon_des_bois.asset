@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
   id: ING02
   nom: Champignon des bois
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 8879dac8910e32847a05946f4e985dbd, type: 3}
   description: "Base des soupes, go\xFBt terreux"
   type: 0
   qualite: 1

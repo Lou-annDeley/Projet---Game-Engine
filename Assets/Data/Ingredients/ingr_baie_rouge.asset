@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
   id: ING05
   nom: Baie rouge
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 5cf170bbe22186f43bdef00a4a033068, type: 3}
   description: "Fruit \xE9nergisant"
   type: 0
   qualite: 1

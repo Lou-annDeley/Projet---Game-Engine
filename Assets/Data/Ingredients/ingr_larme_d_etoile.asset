@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
   id: ING14
   nom: "Larme d'\xE9toile"
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: ec6d721ff1eaffe458340afa46b662bb, type: 3}
   description: "Indispensable \xE0 la m\xE9ga-potion anti-fant\xF4me"
   type: 2
   qualite: 1
