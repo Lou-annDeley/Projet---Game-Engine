@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c0048d399a8d04db9fb68e25cb162a, type: 3}
+  m_Name: client_chevalier
+  m_EditorClassIdentifier: Assembly-CSharp::ClientData
+  id: CLI06
+  nom: Sire Aubert
+  metier: le chevalier
+  spriteCalme: {fileID: 0}
+  spriteEnerve: {fileID: 0}
+  spriteFurieux: {fileID: 0}
+  couleurProvisoire: {r: 0.2901961, g: 0.37254903, b: 0.5254902, a: 1}
+  repliquesCommande:
+  - "Sorci\xE8re ! Ma qu\xEAte exige {recette} !"
+  - Un chevalier ne recule devant rien. Sauf la faim. {recette}, je vous prie.
+  repliqueRetour: "Mes aventures me ram\xE8nent \xE0 votre comptoir."
+  repliqueContent: Par ma lance, quel breuvage !
+  repliqueMecontent: C'est une trahison !
+  repliqueEmpoisonne: Je me sens... moins vaillant.
+  repliqueImpatient: L'honneur m'appelle ailleurs !
+  facteurPatience: 1
+  commandesPossibles: []
+  estFeeCachee: 0
+  niveauApparition: 2

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c0048d399a8d04db9fb68e25cb162a, type: 3}
+  m_Name: client_herboriste
+  m_EditorClassIdentifier: Assembly-CSharp::ClientData
+  id: CLI04
+  nom: Dame Ombeline
+  metier: l'herboriste
+  spriteCalme: {fileID: 0}
+  spriteEnerve: {fileID: 0}
+  spriteFurieux: {fileID: 0}
+  couleurProvisoire: {r: 0.60784316, g: 0.49019608, b: 0.627451, a: 1}
+  repliquesCommande:
+  - "Je pourrais la faire moi-m\xEAme, mais bon... {recette}."
+  - "On m'a dit que vous saviez faire {recette}. Montrez-moi \xE7a."
+  repliqueRetour: "Je reviens v\xE9rifier si votre talent \xE9tait un hasard."
+  repliqueContent: Hmpf. Pas mal. Pas mal du tout.
+  repliqueMecontent: "M\xEAme mon chat ferait mieux."
+  repliqueEmpoisonne: "Int\xE9ressant... ce n'\xE9tait pas dans la recette."
+  repliqueImpatient: Je n'ai pas toute la nuit, moi.
+  facteurPatience: 1
+  commandesPossibles:
+  - {fileID: 11400000, guid: ca2e708a0de01c2469be6afb0d917aff, type: 2}
+  - {fileID: 11400000, guid: fc20fed7cfa181f4d94e0616edff0c89, type: 2}
+  - {fileID: 11400000, guid: fb93c42682a9afb4f8259023015a7733, type: 2}
+  - {fileID: 11400000, guid: 332d43061fa2eaf4a9d837984c14f9bb, type: 2}
+  estFeeCachee: 0
+  niveauApparition: 2

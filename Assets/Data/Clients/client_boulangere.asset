@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c0048d399a8d04db9fb68e25cb162a, type: 3}
+  m_Name: client_boulangere
+  m_EditorClassIdentifier: Assembly-CSharp::ClientData
+  id: CLI02
+  nom: Mireille
+  metier: "la boulang\xE8re"
+  spriteCalme: {fileID: 0}
+  spriteEnerve: {fileID: 0}
+  spriteFurieux: {fileID: 0}
+  couleurProvisoire: {r: 0.64705884, g: 0.38431373, b: 0.3019608, a: 1}
+  repliquesCommande:
+  - Bonsoir ma belle ! Tu me ferais {recette} ?
+  - "Je sors du four, il me faut {recette} pour tenir jusqu'\xE0 demain."
+  repliqueRetour: "Me revoil\xE0 ! Ta derni\xE8re pr\xE9paration m'a fait un bien
+    fou."
+  repliqueContent: "D\xE9licieux ! Je t'apporterai une brioche."
+  repliqueMecontent: "Oh... ce n'est pas du tout \xE7a."
+  repliqueEmpoisonne: C'est... original. Je crois.
+  repliqueImpatient: "Mes pains vont br\xFBler, je file !"
+  facteurPatience: 1.2
+  commandesPossibles:
+  - {fileID: 11400000, guid: d645dcfeff5826344995f2a009e8770f, type: 2}
+  - {fileID: 11400000, guid: 0dc96a6b030050c46b910da5279e1c0b, type: 2}
+  - {fileID: 11400000, guid: 9732fd2c4cd679642bbd6b8c189dd99b, type: 2}
+  - {fileID: 11400000, guid: 50b8f117d64067b4a85b0d5a00da6dcb, type: 2}
+  estFeeCachee: 0
+  niveauApparition: 1
