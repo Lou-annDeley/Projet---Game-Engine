@@ -2,13 +2,22 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-// Un bocal sur l'étagère : on le glisse-dépose dans le chaudron.
+// Un bac d'ingrédient (ou un bocal) : on le glisse-dépose dans le chaudron.
+// Avec un sprite de bac : le bac est affiché, l'ingrédient est dessiné dedans,
+// et c'est l'image de l'ingrédient qui suit la souris pendant le glisser.
 // Besoin dans la scène : un EventSystem + un Physics 2D Raycaster sur la caméra.
 [RequireComponent(typeof(SpriteRenderer), typeof(BoxCollider2D))]
 public class IngredientSlot : MonoBehaviour,
     IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public IngredientData ingredient;
+
+    [Tooltip("Sprite du bac (vue de dessus). Vide = l'ingrédient est affiché seul, comme avant.")]
+    public Sprite spriteBac;
+    [Tooltip("Taille de l'ingrédient dans le bac (1 = toute la largeur du bac).")]
+    [Range(0.3f, 1f)] public float tailleDansBac = 0.8f;
+
+    SpriteRenderer renduIngredient; // l'ingrédient dessiné dans le bac
 
     SpriteRenderer rendu;
     Camera cam;
@@ -43,17 +52,42 @@ public class IngredientSlot : MonoBehaviour,
         if (abonne && StockManager.Instance != null) StockManager.Instance.StockChange -= SurStockChange;
     }
 
-    public void Initialiser(IngredientData data)
+    public void Initialiser(IngredientData data, Sprite bac = null)
     {
         ingredient = data;
+        spriteBac = bac;
         AppliquerVisuel();
     }
 
     void AppliquerVisuel()
     {
         bool aUnSprite = ingredient.sprite != null;
-        rendu.sprite = aUnSprite ? ingredient.sprite : SpriteParDefaut();
+        Sprite spriteIngredient = aUnSprite ? ingredient.sprite : SpriteParDefaut();
         couleurNormale = aUnSprite ? Color.white : CouleurDuType(ingredient.type);
+
+        if (spriteBac != null)
+        {
+            // Le bac porte le collider ; l'ingrédient est un enfant dessiné par-dessus
+            rendu.sprite = spriteBac;
+            if (renduIngredient == null)
+            {
+                var enfant = new GameObject("Ingredient");
+                enfant.transform.SetParent(transform, false);
+                renduIngredient = enfant.AddComponent<SpriteRenderer>();
+            }
+            renduIngredient.sprite = spriteIngredient;
+            renduIngredient.sortingLayerID = rendu.sortingLayerID;
+            renduIngredient.sortingOrder = rendu.sortingOrder + 1;
+            // Mise à l'échelle pour tenir dans le bac
+            Vector2 tBac = spriteBac.bounds.size, tIng = spriteIngredient.bounds.size;
+            float echelle = tailleDansBac * Mathf.Min(tBac.x / tIng.x, tBac.y / tIng.y);
+            renduIngredient.transform.localScale = Vector3.one * echelle;
+            renduIngredient.transform.localPosition = spriteBac.bounds.center - spriteIngredient.bounds.center * echelle;
+        }
+        else
+        {
+            rendu.sprite = spriteIngredient;
+        }
 
         var col = GetComponent<BoxCollider2D>();
         col.size = rendu.sprite.bounds.size;
@@ -71,11 +105,21 @@ public class IngredientSlot : MonoBehaviour,
         return ingredient != null && StockManager.Instance != null && StockManager.Instance.Quantite(ingredient) > 0;
     }
 
-    // Bocal grisé quand le stock est vide
+    // Bac (ou bocal) grisé quand le stock est vide
     void MettreAJourDisponibilite()
     {
         if (rendu == null || ingredient == null) return;
-        rendu.color = EstDisponible() ? couleurNormale : new Color(0.35f, 0.35f, 0.35f, 0.6f);
+        Color grise = new Color(0.35f, 0.35f, 0.35f, 0.6f);
+        bool dispo = EstDisponible();
+        if (renduIngredient != null)
+        {
+            rendu.color = dispo ? Color.white : grise;
+            renduIngredient.color = dispo ? couleurNormale : grise;
+        }
+        else
+        {
+            rendu.color = dispo ? couleurNormale : grise;
+        }
     }
 
     // ---------- Survol ----------
@@ -96,10 +140,12 @@ public class IngredientSlot : MonoBehaviour,
 
         copieDrag = new GameObject("Drag_" + ingredient.id);
         var sr = copieDrag.AddComponent<SpriteRenderer>();
-        sr.sprite = rendu.sprite;
+        // C'est l'ingrédient (pas le bac) qui suit la souris
+        SpriteRenderer source = renduIngredient != null ? renduIngredient : rendu;
+        sr.sprite = source.sprite;
         sr.color = couleurNormale;
         sr.sortingOrder = 100;
-        copieDrag.transform.localScale = transform.lossyScale * 1.1f;
+        copieDrag.transform.localScale = source.transform.lossyScale * 1.1f;
         SuivreSouris(e);
     }
 

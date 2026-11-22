@@ -54,7 +54,10 @@ public class Chaudron : MonoBehaviour
 
     void MettreAJourCouleur()
     {
-        if (liquide != null) liquide.color = EstEmpoisonne ? couleurPoison : couleurNormale;
+        if (liquide == null) return;
+        liquide.color = EstEmpoisonne ? couleurPoison : couleurNormale;
+        // Liquide séparé (enfant) : caché tant que le chaudron est vide
+        if (liquide.gameObject != gameObject) liquide.enabled = contenu.Count > 0;
     }
 
     // Petit rebond quand un ingrédient tombe dedans
