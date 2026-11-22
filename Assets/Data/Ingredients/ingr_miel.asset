@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
   id: ING04
   nom: Miel
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 84bfe18232879fb40bc042a4cd789bc7, type: 3}
   description: "Adoucit les recettes, go\xFBt sucr\xE9"
   type: 0
   qualite: 1

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
   id: ING01
   nom: Herbe lunaire
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 5473d52c668b4b144887382a6876623e, type: 3}
   description: Base de beaucoup de potions, douce et apaisante
   type: 0
   qualite: 1

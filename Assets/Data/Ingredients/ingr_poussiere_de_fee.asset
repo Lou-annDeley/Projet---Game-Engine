@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
   id: ING15
   nom: "Poussi\xE8re de f\xE9e"
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: eae025e303027464a847c51115beda81, type: 3}
   description: "Aide \xE0 battre les fant\xF4mes (donn\xE9e par les f\xE9es)"
   type: 3
   qualite: 1

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
   id: ING12
   nom: Digitale
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 66010af62e26ae24cb2922da0bfac954, type: 3}
   description: Fleur violette, fait trembler et tousser
   type: 1
   qualite: 1

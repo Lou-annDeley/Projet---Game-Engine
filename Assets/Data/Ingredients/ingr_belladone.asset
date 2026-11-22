@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
   id: ING10
   nom: Belladone
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 8b55e9c2d777f3044a50dcdbe29c426c, type: 3}
   description: "Baie noire, provoque des vertiges et la peau p\xE2le"
   type: 1
   qualite: 1

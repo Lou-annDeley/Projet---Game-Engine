@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
   id: ING09
   nom: "\xC9corce d'\xE9rable noir"
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 9ad3f40d83300a44b9ca2eec7a1b986c, type: 3}
   description: "\xC9pice qui renforce les potions"
   type: 0
   qualite: 1

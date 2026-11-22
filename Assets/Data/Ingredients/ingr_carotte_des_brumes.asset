@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
   id: ING07
   nom: Carotte des brumes
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 94320021e494e124582479194d163058, type: 3}
   description: "L\xE9gume qui donne une teinte brumeuse aux soupes"
   type: 0
   qualite: 1
