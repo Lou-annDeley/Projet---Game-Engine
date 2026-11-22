@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
   id: ING18
   nom: Eau de source pure
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 0aa4ed88acb8b1c4c89c99779b4a8556, type: 3}
   description: Base de purification
   type: 4
   qualite: 1
