@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c0048d399a8d04db9fb68e25cb162a, type: 3}
+  m_Name: client_fossoyeur
+  m_EditorClassIdentifier: Assembly-CSharp::ClientData
+  id: CLI11
+  nom: Ignace
+  metier: le fossoyeur
+  spriteCalme: {fileID: 0}
+  spriteEnerve: {fileID: 0}
+  spriteFurieux: {fileID: 0}
+  couleurProvisoire: {r: 0.28627452, g: 0.24705882, b: 0.3372549, a: 1}
+  repliquesCommande:
+  - "Bonsoir. Rude nuit au cimeti\xE8re... {recette}, je vous prie."
+  - Les morts ne mangent plus, mais moi si. {recette}.
+  repliqueRetour: "Je reviens. Les morts, eux, ne sont pas press\xE9s."
+  repliqueContent: Enfin un peu de chaleur.
+  repliqueMecontent: "M\xEAme mes clients habituels se plaindraient."
+  repliqueEmpoisonne: "Je crois que je vais bient\xF4t avoir du travail..."
+  repliqueImpatient: Bon. Je retourne creuser.
+  facteurPatience: 1.1
+  commandesPossibles: []
+  estFeeCachee: 0
+  niveauApparition: 6

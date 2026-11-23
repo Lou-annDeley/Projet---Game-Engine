@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c0048d399a8d04db9fb68e25cb162a, type: 3}
+  m_Name: client_forgeron
+  m_EditorClassIdentifier: Assembly-CSharp::ClientData
+  id: CLI03
+  nom: "P\xE9pin"
+  metier: le forgeron
+  spriteCalme: {fileID: 0}
+  spriteEnerve: {fileID: 0}
+  spriteFurieux: {fileID: 0}
+  couleurProvisoire: {r: 0.54901963, g: 0.36862746, b: 0.23529412, a: 1}
+  repliquesCommande:
+  - "Salut ! Je suis l'apprenti du forgeron. Vite, {recette}, mon ma\xEEtre m'attend
+    !"
+  - "Mon ma\xEEtre m'envoie chercher {recette}. Il a dit de ne pas tra\xEEner."
+  repliqueRetour: "C'est encore P\xE9pin ! Mon ma\xEEtre en redemande."
+  repliqueContent: Merci ! Je cours !
+  repliqueMecontent: Mais j'avais dit autre chose...
+  repliqueEmpoisonne: "Ouh, \xE7a me fait tout dr\xF4le dans le ventre."
+  repliqueImpatient: "Mon ma\xEEtre va me gronder, tant pis !"
+  facteurPatience: 0.8
+  commandesPossibles: []
+  estFeeCachee: 0
+  niveauApparition: 1
