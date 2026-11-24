@@ -1,0 +1,42 @@
+Empoisonner à partir du lvl 5
+Fantômes à partir du lvl 6 donc Fées à partir du lvl 6 aussi
+
+Durée d'un niveau : 
+1) 2min - 3 clients
+2) 2min - 4 clients
+3) 3min - 5 clients /!\client relou x1
+4) 3min - 6 clients /!\client relou x1 + préparation d'ingrédients
+5) 4min - 7 clients /!\client relou x1 + préparation d'ingrédients + empoisonnement
+6) 4min - 8 clients /!\client relou x2 + préparation d'ingrédients + empoisonnement
+7) 4min - 9 clients /!\client relou x2 + préparation d'ingrédients + empoisonnement
+8) 4min - 10 clients /!\client relou x2 + préparation d'ingrédients + empoisonnement
+
+Augmenter le nombre d'ingrédients en montant dans les lvl
+
+A faire : 
+- Slide les soupes du comptoir vers le client
+- Ecrire plus grand les recettes dans la cuisine
+- Bouton Grimoire en haut à droite
+- Créer plus d'ingrédients
+- Recette pour ralentir le temps -> que des ingrédients verts(d'empoisonnement)
+- Choisir les ingrédients qui sont préparables et les faire apparaitre au lvl 4
+- Faire apparaitre un message de la part du manager au lvl 4 pour payer double
+- Rire maléfique quand on empoisonne
+- Préparation d'ingrédient -> Couteau et main + cliquer plusieurs fois pour couper en entier
+- Patience : en bas de l'écran, la commande vibre si la patience atteint un niveau rouge
+
+SI TROP facile : ajouter préparation d'ingrédients - ingrédients à préparer qu'on débloque que à partir du lvl 4
+Envie d'empoisonner : le manager paie double si on empoisonne
+
+La fée donne un ingrédient à ajouter dans la recette du remède. Si on n'a pas cet ingrédient magique, le remède ne marche pas et on perd le niveau.
+
+Les clients arrivent en groupe à partir du lvl 3(par 2) et lvl 4(par3/4), mais on n'a qu'un chaudron donc une seule potion à préparer 
+Son de sonnette qu'on entend depuis la cuisine, qui signale l'arrivée d'un nouveau client + icone de cloche qui sonne dans la cuisine
+
+Règles client relou : 
+Servir le client relou en priorité : sa patience diminue 
+(+ laisse un pourboire si bien servi)
+Change d'avis en pleins milieu de préparation donc on doit préparer la potion puis la jeter pour recommencer la bonne recette
+
+
+Questions : Entre deux des clients ? 
