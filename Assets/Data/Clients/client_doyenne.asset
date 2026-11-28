@@ -15,7 +15,7 @@ MonoBehaviour:
   id: CLI08
   nom: "Grand-m\xE8re Odile"
   metier: la doyenne
-  spriteCalme: {fileID: 0}
+  spriteCalme: {fileID: 21300000, guid: ce792fe8667f1fd4aa191d1fef6e90e6, type: 3}
   spriteEnerve: {fileID: 0}
   spriteFurieux: {fileID: 0}
   couleurProvisoire: {r: 0.6901961, g: 0.5411765, b: 0.65882355, a: 1}

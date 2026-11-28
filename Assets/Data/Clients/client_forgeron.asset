@@ -15,7 +15,7 @@ MonoBehaviour:
   id: CLI03
   nom: "P\xE9pin"
   metier: le forgeron
-  spriteCalme: {fileID: 0}
+  spriteCalme: {fileID: 21300000, guid: 58ec814fa63dbbf4a9a116687c13ab1c, type: 3}
   spriteEnerve: {fileID: 0}
   spriteFurieux: {fileID: 0}
   couleurProvisoire: {r: 0.54901963, g: 0.36862746, b: 0.23529412, a: 1}

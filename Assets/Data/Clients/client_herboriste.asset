@@ -15,7 +15,7 @@ MonoBehaviour:
   id: CLI04
   nom: Dame Ombeline
   metier: l'herboriste
-  spriteCalme: {fileID: 0}
+  spriteCalme: {fileID: 21300000, guid: 3f74b67e39822d74cb15949df5558b6b, type: 3}
   spriteEnerve: {fileID: 0}
   spriteFurieux: {fileID: 0}
   couleurProvisoire: {r: 0.60784316, g: 0.49019608, b: 0.627451, a: 1}

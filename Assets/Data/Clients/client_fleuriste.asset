@@ -15,7 +15,7 @@ MonoBehaviour:
   id: CLI05
   nom: Rosalie
   metier: la fleuriste
-  spriteCalme: {fileID: 0}
+  spriteCalme: {fileID: 21300000, guid: 52b4238315a53c4479852b3e8874d5cc, type: 3}
   spriteEnerve: {fileID: 0}
   spriteFurieux: {fileID: 0}
   couleurProvisoire: {r: 0.7490196, g: 0.2784314, b: 0.5803922, a: 1}

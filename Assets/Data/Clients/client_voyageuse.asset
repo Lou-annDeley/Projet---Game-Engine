@@ -15,7 +15,7 @@ MonoBehaviour:
   id: CLI10
   nom: "C\xE9leste"
   metier: la voyageuse
-  spriteCalme: {fileID: 0}
+  spriteCalme: {fileID: 21300000, guid: eb0ebd3ab02080540961e385cca53e16, type: 3}
   spriteEnerve: {fileID: 0}
   spriteFurieux: {fileID: 0}
   couleurProvisoire: {r: 0.49019608, g: 0.35686275, b: 0.6509804, a: 1}
