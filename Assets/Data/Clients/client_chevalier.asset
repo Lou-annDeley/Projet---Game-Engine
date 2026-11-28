@@ -15,7 +15,7 @@ MonoBehaviour:
   id: CLI06
   nom: Sire Aubert
   metier: le chevalier
-  spriteCalme: {fileID: 0}
+  spriteCalme: {fileID: 21300000, guid: 191255161bea69c43a9323b8f71deaf4, type: 3}
   spriteEnerve: {fileID: 0}
   spriteFurieux: {fileID: 0}
   couleurProvisoire: {r: 0.2901961, g: 0.37254903, b: 0.5254902, a: 1}

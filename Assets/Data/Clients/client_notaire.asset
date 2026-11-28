@@ -15,7 +15,7 @@ MonoBehaviour:
   id: CLI07
   nom: "Ma\xEEtre Corbin"
   metier: le notaire
-  spriteCalme: {fileID: 0}
+  spriteCalme: {fileID: 21300000, guid: 218efb85e785016439f11c4a1611e628, type: 3}
   spriteEnerve: {fileID: 0}
   spriteFurieux: {fileID: 0}
   couleurProvisoire: {r: 0.36078432, g: 0.26666668, b: 0.28235295, a: 1}
