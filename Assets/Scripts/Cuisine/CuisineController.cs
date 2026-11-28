@@ -17,6 +17,8 @@ public class CuisineController : MonoBehaviour
     [Header("Objets de l'équipe (trouvés par le menu de construction)")]
     public Chaudron chaudron;
     public Grimoire grimoire;
+    [Tooltip("Mini-jeu de mélange (KAN-33, Sarah). Vide = trouvé automatiquement.")]
+    public MiniJeuCuisson miniJeu;
 
     [Header("Mini-tickets")]
     public TicketUI[] tickets = new TicketUI[4];
@@ -63,12 +65,13 @@ public class CuisineController : MonoBehaviour
 
         rubanComptoir.onClick.AddListener(() => gm.AllerA(GameManager.SceneComptoir));
         rubanBoutique.onClick.AddListener(() => gm.AllerA(GameManager.SceneBoutique));
-        boutonPreparer.onClick.AddListener(() => gm.LancerPreparation());
+        boutonPreparer.onClick.AddListener(Preparer);
         boutonVider.onClick.AddListener(Vider);
         boutonJeter.onClick.AddListener(() => gm.JeterPreparation());
 
         if (chaudron == null) chaudron = FindFirstObjectByType<Chaudron>();
         if (grimoire == null) grimoire = FindFirstObjectByType<Grimoire>();
+        if (miniJeu == null) miniJeu = FindFirstObjectByType<MiniJeuCuisson>();
         if (chaudron != null) chaudron.ContenuChange += SurContenuChange;
 
         gm.SignalerArrivee(GameManager.SceneCuisine);
@@ -84,9 +87,18 @@ public class CuisineController : MonoBehaviour
         gm.SynchroniserChaudron(chaudron.Contenu);
     }
 
+    // KAN-33 (Sarah) : le mini-jeu de mélange passe avant la cuisson.
+    // S'il n'y a pas de mini-jeu dans la scène, on lance directement la cuisson comme avant.
+    void Preparer()
+    {
+        if (miniJeu != null && miniJeu.isActiveAndEnabled) miniJeu.Demarrer();
+        else gm.LancerPreparation();
+    }
+
     void Vider()
     {
         if (gm.EnPreparation || chaudron == null) return;
+        if (miniJeu != null && miniJeu.EnCours) return;
         chaudron.Vider();
     }
 
@@ -166,7 +178,8 @@ public class CuisineController : MonoBehaviour
         if (clavier.bKey.wasPressedThisFrame) gm.AllerA(GameManager.SceneBoutique);
         if (clavier.gKey.wasPressedThisFrame && grimoire != null) grimoire.Basculer();
         if (livreGrimoire != null && livreGrimoire.activeSelf) return;
-        if (clavier.spaceKey.wasPressedThisFrame) gm.LancerPreparation();
+        if (miniJeu != null && miniJeu.EnCours) return;
+        if (clavier.spaceKey.wasPressedThisFrame) Preparer();
         if (clavier.backspaceKey.wasPressedThisFrame) Vider();
     }
 
