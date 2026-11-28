@@ -557,6 +557,8 @@ public class GameManager : MonoBehaviour
         int prix = PrixSelonHumeur(c);
         if (potion.empoisonnee)
         {
+            // Le manager paie double les potions empoisonnées (Sarah, message du manager)
+            prix = Mathf.RoundToInt(prix * PoisonManager.MultiplicateurPrix);
             // Il paie sans rien remarquer... et reviendra avec une anomalie (KAN-56, Sarah)
             c.reaction = Reaction.Empoisonne;
             c.replique = c.client != null ? c.client.repliqueEmpoisonne : "Mmh... drôle de goût.";
