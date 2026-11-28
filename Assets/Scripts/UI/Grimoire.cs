@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Le grimoire consultable en cuisine : un ruban « Grimoire » ouvre un livre
+// Le grimoire consultable en cuisine : un ruban « Grimoire » (en haut à droite) ouvre un livre
 // avec 3 onglets (Soupes, Potions, Remèdes). L'interface est construite toute seule
 // au lancement (couleurs de la DA). Les recettes pas encore débloquées sont en « ??? ».
 // Besoin dans la scène : un EventSystem (déjà présent dans Cuisine).
@@ -15,6 +15,12 @@ public class Grimoire : MonoBehaviour
     public List<RemedeData> remedes = new List<RemedeData>();
     [Tooltip("Afficher les recettes pas encore débloquées en « ??? (niveau X) ».")]
     public bool montrerVerrouillees = true;
+
+    [Header("Ruban « Grimoire »")]
+    [Tooltip("Coin de l'écran : (1,1) = haut droite, (0,1) = haut gauche, (1,0) = bas droite, (0,0) = bas gauche.")]
+    public Vector2 coinRuban = new Vector2(1, 1);
+    [Tooltip("Décalage depuis ce coin, en pixels sur un écran 1920×1080. Ex : (-40, -40) = un peu à l'intérieur du coin haut droite. Baisse le Y (ex. -140) si le ruban cache le HUD.")]
+    public Vector2 decalageRuban = new Vector2(-40, -40);
 
     enum Onglet { Soupes, Potions, Remedes }
 
@@ -62,9 +68,13 @@ public class Grimoire : MonoBehaviour
         scaler.matchWidthOrHeight = 0.5f;
         Transform c = canvasGO.transform;
 
-        // Ruban « Grimoire » en bas à droite (toujours visible)
+        // Ruban « Grimoire » (en haut à droite par défaut, réglable dans l'Inspector)
         var ruban = CreerBouton(c, "Grimoire", Lavande, Laiton, 40, Basculer);
-        Placer(ruban.transform, new Vector2(1, 0), new Vector2(1, 0), new Vector2(-40, 40), new Vector2(280, 90));
+        // Pivot au centre du ruban (la surbrillance de la démo se centre dessus) ;
+        // on compense pour que « Decalage Ruban » reste mesuré depuis le coin choisi.
+        Vector2 tailleRuban = new Vector2(280, 90);
+        Vector2 positionCentre = decalageRuban + new Vector2((0.5f - coinRuban.x) * tailleRuban.x, (0.5f - coinRuban.y) * tailleRuban.y);
+        Placer(ruban.transform, coinRuban, new Vector2(0.5f, 0.5f), positionCentre, tailleRuban);
 
         // Le livre (caché au départ)
         livre = new GameObject("Livre", typeof(RectTransform));

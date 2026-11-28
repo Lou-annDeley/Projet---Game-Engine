@@ -738,6 +738,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1512a2e23e0aa844dada15deb85d3940, type: 2}
   - {fileID: 11400000, guid: d48ac856307912446a053c9533e209cc, type: 2}
   montrerVerrouillees: 1
+  coinRuban: {x: 1, y: 1}
+  decalageRuban: {x: -40, y: -105}
 --- !u!4 &85163426
 Transform:
   m_ObjectHideFlags: 0
