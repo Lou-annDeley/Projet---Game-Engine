@@ -160,8 +160,28 @@ public class IngredientSlot : MonoBehaviour,
         Destroy(copieDrag);
 
         GameObject cible = e.pointerCurrentRaycast.gameObject;
+
+        // KAN-36 : lâché sur la planche à découper
+        PlancheADecouper planche = cible != null ? cible.GetComponentInParent<PlancheADecouper>() : null;
+        if (planche != null)
+        {
+            if (planche.PeutRecevoir(ingredient) && StockManager.Instance.Retirer(ingredient))
+                planche.Poser(ingredient);
+            else
+                StartCoroutine(Secouer());
+            return;
+        }
+
         Chaudron chaudron = cible != null ? cible.GetComponentInParent<Chaudron>() : null;
         if (chaudron == null) return; // lâché ailleurs : rien ne se passe
+
+        // KAN-36 : à partir du niveau de découpe, certains ingrédients doivent d'abord être coupés
+        if (PlancheADecouper.DoitEtreCoupe(ingredient))
+        {
+            PlancheADecouper.Instance.SignalerACouper(ingredient);
+            StartCoroutine(Secouer());
+            return;
+        }
 
         if (chaudron.PeutAjouter && StockManager.Instance.Retirer(ingredient))
             chaudron.AjouterIngredient(ingredient);
@@ -202,10 +222,10 @@ public class IngredientSlot : MonoBehaviour,
         switch (type)
         {
             case TypeIngredient.Toxique: return Hex("#6BA027"); // Vert poison
-            case TypeIngredient.Secret:  return Hex("#FAE4B1"); // Bougie
+            case TypeIngredient.Secret: return Hex("#FAE4B1"); // Bougie
             case TypeIngredient.Magique: return Hex("#693287"); // Violet magique
-            case TypeIngredient.Remede:  return Hex("#597CB0"); // Bleu brume
-            default:                     return Hex("#C88F60"); // Laiton
+            case TypeIngredient.Remede: return Hex("#597CB0"); // Bleu brume
+            default: return Hex("#C88F60"); // Laiton
         }
     }
 
