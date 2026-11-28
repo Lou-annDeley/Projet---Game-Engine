@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PoisonManager
   reglages: {fileID: 11400000, guid: d8ce5dcf12ebc814e94cdaf44fe0bbec, type: 2}
-  niveauDeDepart: 5
+  niveauDeDepart: 1
 --- !u!114 &1478106465922926734
 MonoBehaviour:
   m_ObjectHideFlags: 0

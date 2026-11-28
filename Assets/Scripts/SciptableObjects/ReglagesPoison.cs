@@ -8,4 +8,7 @@ public class ReglagesPoison : ScriptableObject
 {
     [Tooltip("Niveau à partir duquel les ingrédients toxiques apparaissent (le jeu a 10 niveaux).")]
     [Range(1, 10)] public int niveauDeblocage = 5;
+
+    [Tooltip("Le manager multiplie le prix d'une potion empoisonnée (2 = paie double).")]
+    [Range(1f, 4f)] public float multiplicateurPrix = 2f;
 }

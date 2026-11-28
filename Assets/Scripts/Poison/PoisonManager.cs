@@ -23,6 +23,10 @@ public class PoisonManager : MonoBehaviour
 
     public static bool PoisonDebloque => Progression.NiveauActuel >= NiveauDeblocage;
 
+    // Le manager paie plus cher les potions empoisonnées (réglable dans reglages_poison)
+    public static float MultiplicateurPrix =>
+        Instance != null && Instance.reglages != null ? Instance.reglages.multiplicateurPrix : 2f;
+
     void Awake()
     {
         if (Instance != null && Instance != this) { Destroy(this); return; }

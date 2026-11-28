@@ -1168,6 +1168,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206187459}
   m_CullTransparentMesh: 1
+--- !u!1 &217277190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 217277191}
+  - component: {fileID: 217277192}
+  m_Layer: 0
+  m_Name: MessageManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &217277191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217277190}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &217277192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217277190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c264ffa04a8f4d1409691ed4b363648c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MessageManager
+  titre: Une lettre du manager
+  message: "Ma ch\xE8re sorci\xE8re,\n\nLes affaires vont mal, et certains clients
+    me doivent beaucoup trop d'argent...\n\nSi, par m\xE9garde, une de tes potions
+    \xE9tait \xAB assaisonn\xE9e \xBB avec un de ces ingr\xE9dients verts, je te
+    la paierais le double. Personne n'en saura rien.\n\nC'est toi qui vois."
+  signature: "\u2014 Le Manager"
+  texteBouton: Compris...
 --- !u!1001 &229804591
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1723,7 +1774,7 @@ MonoBehaviour:
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 44
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -9496,3 +9547,4 @@ SceneRoots:
   - {fileID: 1372883342}
   - {fileID: 51302092}
   - {fileID: 450238984}
+  - {fileID: 217277191}
